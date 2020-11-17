@@ -17,7 +17,6 @@ public class BbsService {
 	public List<BbsDto> getList() {
 		return bbsDao.getList();
 	}
-<<<<<<< HEAD
 	
 	public int addDoc(BbsDto dto) {
 		return bbsDao.addDoc(dto);  
@@ -30,8 +29,5 @@ public class BbsService {
 	public BbsDto getDetail(BbsDto dto) {
 		return bbsDao.getDetail(dto);
 	}
-	
-=======
 
->>>>>>> refs/remotes/origin/main
 }
