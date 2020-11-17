@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bbs.board.dao.BbsDao">
+
+	<select id="getList" resultType="com.bbs.board.dto.BbsDto">
+		SELECT
+		 seq, title, USER, detl
+		FROM 
+		 tb_bbs 
+		 Limit 0, 10
+	</select>
+	
+	<insert id="addDoc" parameterType="com.bbs.board.dto.BbsDto">
+		insert into tb_bbs (
+			title,
+			user,
+			detl
+		) values (
+			#{title},
+			#{user},
+			#{detl}
+		)
+	
+	</insert>
+
+	<select id="getSearchList" resultType="com.bbs.board.dto.BbsDto" parameterType="com.bbs.board.dto.BbsDto">
+		SELECT
+		 seq, title, USER, detl
+		FROM 
+		 tb_bbs 
+		WHERE
+		 title LIKE CONCAT('%', #{title, jdbcType=VARCHAR}, '%')
+	</select>
+
+	<select id="getDetail" resultType="com.bbs.board.dto.BbsDto" parameterType="com.bbs.board.dto.BbsDto">
+		select
+		    seq,
+		    title,
+		    user,
+		    detl
+		from 
+			tb_bbs
+		where 
+			seq = #{seq}
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</mapper>
