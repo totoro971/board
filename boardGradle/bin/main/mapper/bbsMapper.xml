@@ -9,7 +9,6 @@
 		 seq, title, USER, detl
 		FROM 
 		 tb_bbs 
-<<<<<<< HEAD
 		 Limit 0, 10
 	</select>
 	
@@ -47,38 +46,4 @@
 			seq = #{seq}
 	</select>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-=======
-	</select>
->>>>>>> refs/remotes/origin/main
-
 </mapper>
