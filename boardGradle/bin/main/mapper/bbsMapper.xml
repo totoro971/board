@@ -8,8 +8,9 @@
 		SELECT
 		 seq, title, USER, detl
 		FROM 
-		 tb_bbs 
-		 Limit 0, 10
+		 tb_bbs
+		order by seq desc 
+		 Limit 0, 10 
 	</select>
 	
 	<insert id="addDoc" parameterType="com.bbs.board.dto.BbsDto">

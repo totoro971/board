@@ -33,8 +33,10 @@ public class BbsContorller {
 	
 	@PostMapping("/add")
 	public ModelAndView add(BbsDto dto) {
-		int nCnt = bbsService.addDoc(dto);
-		
+		if(!dto.getTitle().isBlank() && !dto.getTitle().trim().isEmpty()) {
+			int nCnt = bbsService.addDoc(dto);
+		}		
+ 
 		List<BbsDto> list = bbsService.getList();
 		return new ModelAndView("bbsList", "list", list);
 

@@ -18,7 +18,7 @@
 
 </head>
 <body style="padding:10px;">
-	<form action="/add" method="post">
+	<form id="frm" action="/add" method="post">
 		<div class="form-group">
 			<label for="title">제목</label>
 			<input type="text" class="form-control" id="title" name="title">
@@ -32,7 +32,19 @@
 			<textarea class="form-control" rows="5" id="comment" name="detl" id="detl"></textarea>
 		</div>
 
-     	<button type="submit" class="btn btn-primary btn-block">저장</button>
+     	<button type="button" id="btn" class="btn btn-primary btn-block" onclick="add();">저장</button>
 	</form>
+	
+<script>
+	function add() {
+		if($("#title").val().trim() == "") {
+			alert("제목을 입력해주세요");
+			return;
+		}
+
+		document.getElementById("frm").submit();
+	}
+
+</script>	
 </body>
 </html>
